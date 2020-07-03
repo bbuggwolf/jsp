@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pf(count) {
+
+            var obj1 = document.getElementById("start1");
+            var obj2 = document.getElementById("start2");
+            var obj3 = document.getElementById("start4");
+            var obj4 = document.getElementById("start4");
+            var obj5 = document.getElementById("start5");
+
+            obj1.style = "";
+            obj2.style = "";
+            obj3.style = "";
+            obj4.style = "";
+            obj5.style = "";
+            if (count == 1) {
+                obj1.style = "color: #fbbc05f7;";
+            } else if (count == 2) {
+                obj1.style = "color: #fbbc05f7;";
+                obj2.style = "color: #fbbc05f7;";
+            }
+
+        }
+    </script>
+    <style>
+        .font1 {
+            color: #fbbc05f7;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        评分:
+        <span id="start1" onclick="pf(1);">☆</span>
+        <span id="start2" onclick="pf(2);">☆</span>
+        <span id="start3" onclick="pf(3);">☆</span>
+        <span id="start4" onclick="pf(4);">☆</span>
+        <span id="start5" onclick="pf(5);">☆</span>
+    </p>
+</body>
+
+</html>

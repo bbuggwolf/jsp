@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var start = new Date();
+        var end = new Date();
+
+        // end.seconds(60);
+        end.setMinutes(start.getMinutes() + 1);
+
+        setInterval(function () {
+
+            start = new Date();
+            var times = end - start;
+
+            var seconds = Math.floor(times / 1000);
+            if (seconds <= 0) {
+                return false;
+            }
+
+            var showTime = "<h1>" + seconds + "秒后课跳过广告" + "</h1>";
+            var obj1 = document.getElementById("times");
+            obj1.innerHTML = showTime;
+
+        }, 1000);
+    </script>
+
+</head>
+
+<body>
+    <p id="times"></p>
+</body>
+
+</html>

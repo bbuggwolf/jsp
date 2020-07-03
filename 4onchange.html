@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function changeCity(obj) {
+            var city = [
+                ['千代田', '新宿', '台东', '平川'],
+                ['琦玉', '川口', '西川口'],
+                ['千叶', '船桥', '淞沪'],
+                ['梅田']];
+            var str = "";
+            for (var i in city[obj.value]) {
+                str += '<option value = "' + i + '">' + city[obj.value][i] + '</option>';
+            }
+            var obj2 = document.getElementsByName("city2")[0];
+            obj2.innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label>都/縣</label>
+        <!-- select 是下拉菜单
+        option 是下来菜单的选项 value 是值属性 -->
+        <select name="city1" onchange="changeCity(this)">
+            <option value="0">東京都</option>
+            <option value="1">埼玉県</option>
+            <option value="2">千葉県</option>
+            <option value="3">大阪府</option>
+        </select>
+        <label>市/区</label>
+        <select name="city2">
+            <option value="0">千代田区</option>
+            <option value="1">新宿区</option>
+            <option value="2">台東区</option>
+            <option value="3">品川区</option>
+        </select>
+    </div>
+</body>
+
+</html>

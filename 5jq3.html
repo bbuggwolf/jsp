@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script src=js/jquery.min.js"></Script>
+    <Script>
+        $(document).ready(function () {
+            // 无参数
+            alert($("#testa").html()); // 容器中所有内容
+            alert($("#test").text());  // 容器中文字内容
+            alert($("#testa").val()); // 容器中value值
+            // 带参数
+            $("#testa").text('asfasasf');
+            $("#testb").val("bbbbbb");
+        });
+    </Script>
+</head>
+
+<body>
+    <div id="testa">
+        <p>safasfasfaf</p>
+    </div>
+    <input type="text" value="输入值" id="testb">
+</body>
+
+</html>

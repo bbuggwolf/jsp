@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#change").click(function () {
+                // 判断是否被选中,如果选中则把选项变为复选框,否则是单选框
+                if ($(this).is(":checked")) {
+                    // alert("xuanzhong");
+
+                    // attr 获取属性的事件   读: $(".xx ul li").attr(属性)   写:$(".xx ul li").attr(属性, 值)
+                    // alert($("#change").attr("class"))
+                    // $(".xx ul li").attr("class", 'ok');
+
+
+                    $(".xx ul li input").attr("type", "checkbox");
+                } else {
+                    // alert("wei xuanzhong");
+                    $(".xx ul li input").attr("type", "radio");
+                }
+            })
+
+        });
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        #app {
+            text-align: left;
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        .xx ul li {
+            list-style: hiragana;
+            list-style-position: inside;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .ok {
+            border: 1px solid #0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h3>1,itstudy什么学校<input type="checkbox" id="change" value="1" class="abc"> 变为复选</h3>
+
+        <div class="xx">
+            <ul>
+                <li><input type="radio" name="xz" class="" value="1">美食学校</li>
+                <li><input type="radio" name="xz" class="" value="2">日语学校</li>
+                <li><input type="radio" name="xz" class="" value="3">it学校</li>
+                <li><input type="radio" name="xz" class="" value="4">中学校</li>
+            </ul>
+        </div>
+        <p>
+
+        </p>
+    </div>
+</body>
+
+</html>

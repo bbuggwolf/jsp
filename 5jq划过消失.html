@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script src="js/jquery.min.js"></Script>
+    <Script>
+        // $(容器).事件();
+        // $(容器).事件(function(){方法体})
+        // 找容器和css找容器一样
+        // 找容器和css一样,#...标签名,this()
+
+        // 整个html的标签读完后再执行方法
+        $(document).ready(function () {
+            $("#testa").hover(function () {
+                // hide()隐藏
+                $(this).hide();
+            });
+
+            $(".testb").click(function () {
+                // show()显示
+                $("#testa").show();
+            });
+        });
+    </Script>
+    <style>
+        #testa {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #cdcdcd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="testa">
+        aaaaaaa
+    </div>
+    <button class="testb">显示</button>
+</body>
+
+</html>

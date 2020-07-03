@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            line-height: 300px;
+            border: 1px solid #cdcd;
+        }
+
+        .over {
+            color: #fff;
+            background: #000;
+        }
+    </style>
+
+    <script>
+        function over(obj) {
+            obj.className = "over";
+        }
+        function out(obj) {
+            obj.className = "";
+        }
+    </script>
+</head>
+
+<body>
+    <div onmouseover="over(this);" class="" ; onmouseout="out(this);">aaaaaaaaaaaaaa</div>
+</body>
+
+</html>

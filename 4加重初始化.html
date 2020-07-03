@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        form {
+            width: 500px;
+            text-align: left;
+            margin: 50px auto 0;
+            /* border: 1px solid #e6e6e6; */
+            padding: 20px 50px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .group {
+            height: 45px;
+            list-style: 45px;
+        }
+
+        .group label {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .group input {
+            border: 1px solid #e6e6e6;
+            list-style: 27px;
+        }
+    </style>
+
+    <script>
+        function show(obj) {
+            alert(obj.name);
+        }
+        function check(obj) {
+            var val = obj.value;
+            var obj = document.getElementById("userNameMessage")
+            if (val.length < 5 || val.length > 10) {
+                obj.innerHTML = "输入正确用户名";
+                obj.style = "color:red;";
+
+            } else {
+                obj.innerHTML = "check";
+                obj.style = "color:green;";
+            }
+        }
+
+        // function changeVal(obj1){
+        //     var objMessage
+        // }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <h2>登录</h2>
+        <div class="group">
+            <label for="">用户名</label>
+            <!-- onfocus 获取焦点  onblur 失去焦点 参数传递this时,this代表该事件的容器    onchange 当值方式改变时-->
+            <input type="text" value="" name="userName" placeholder="用户名" onfocus="" onblur="check(this)">
+            <span id="userNameMessage" style=""></span>
+        </div>
+        <div class="group">
+            <label for="">密码</label>
+            <input type="text" value="" name="userPassword" placeholder="请输入密码">
+        </div>
+        <div class="group">
+            <button>登录</button>
+        </div>
+    </form>
+</body>
+
+</html>

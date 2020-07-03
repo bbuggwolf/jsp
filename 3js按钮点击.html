@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+
+<script>
+      function changeName() {
+        // 获取到容器的方法根据id名字
+        // var obj = document.getElementById("test1");
+        // 获取容器根据class名字,class得到是数组
+        // var objs = document.getElementsByClassName("test2");
+        // var obj = objs[0];
+        // 获取容器根据标签名
+        // var objs = document.getElementsByTagName("p");
+        // var obj = objs[0];
+        // alert(obj.id);
+        // alert(obj.innerHTML);
+        // obj.innerHTML = "hello sb";
+
+        //获取容器根据form表单的name
+        var objs = document.getElementsByName("number");
+        var obj = objs[0];
+
+        var val = obj.value;
+        if (typeof (val == "number")) {
+          alert("你的幸运数字是" + obj.value);
+        } else {
+          alert("输入正确数字");
+        }
+      }
+    </script>
+</head>
+<body>
+	<p id="test1" class="test2">itstudy asasf</p>
+	<label for="">输入您的幸运数字</label>
+	<input type="text" name="number" value="" />
+	<p class="test2">itstudy dajia</p>
+	<button onclick="changeName()">点击有惊喜</button>
+</body>
+</html>

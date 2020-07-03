@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script src="js/jquery.min.js"></Script>
+    <Script>
+        $(document).ready(function () {
+            // message中显示输入值
+            // change值发生改变时除法
+            $("#test").change(function () {
+                // 获取值, $(#val).val(); 写 $(#this).val(值)
+                var str = $("#test").val();
+                // 设置容器的内容 innerHTML.  读,$("#message").html() . 写, $("#message").html(值)
+                $("#message").html(str);
+            });
+        });
+    </Script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #app {
+            width: 500px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <label for="">输入值</label>
+        <input id="test">
+    </div>
+    <div class="group" id="message">
+
+    </div>
+</body>
+
+</html>

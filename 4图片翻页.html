@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #banner {
+            width: 100vw;
+            height: 100vh;
+            background: url(../image/ban1.jpg) no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+            top: 85vh;
+            height: 80px;
+        }
+
+        nav ul li {
+            float: left;
+            list-style: none;
+            height: 80px;
+            width: 80px;
+            margin: 0px 10px;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+
+    <script>
+        function changeImg(imgUrl) {
+            var obj = document.getElementById('banner');
+            obj.style = "background: url('" + imgUrl + "') no-repeat; background-size: cover;"
+        }
+    </script>
+</head>
+
+<body>
+    <div id="banner" style=" ">
+        <nav>
+            <ul>
+                <li onclick="changeImg('../image/ban1.jpg')"></li>
+                <li onclick="changeImg('../image/ban2.jpg')"></li>
+                <li onclick="changeImg('../image/ban3.jpg')"></li>
+                <li onclick="changeImg('../image/ban4.jpg')"></li>
+                <li onclick="changeImg('../image/ban5.jpg')"></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

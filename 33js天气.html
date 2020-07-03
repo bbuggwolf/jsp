@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 如果天气好,去散步 否则看电视
+        function testTq() {
+            var obj = document.getElementById("tq");
+            // alert(obj.value);
+            if (obj.value == "好") {
+                alert("散步");
+            } else {
+                alert("看电视");
+            }
+        }
+    </script>
+
+    <div>
+        <label>天气</label>
+        <input type="text" value="" id="tq" name="aaa">
+        <button onclick="testTq()">试试</button>
+    </div>
+</body>
+
+</html>

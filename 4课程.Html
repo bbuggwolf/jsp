@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+        var val = 1;
+        setInterval(function () {
+            if (val % 2 == 1) {
+                $(".bount").eq(0).hide();
+                $(".bount").eq(1).show();
+                $("#banner").css("background", 'url("image/bg1.png") no-repeat');
+            } else {
+                $(".bount").eq(1).hide();
+                $(".bount").eq(0).show();
+                $("#banner").css("background", 'url("image/bg2.png") no-repeat');
+            }
+            $("#banner").css("background-size", "cover");
+            val = val + 1;
+        }, 4000);
+    </script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        /*为了把默认外边距和内边距清空*/
+        body {
+            font-family: Microsoft Yahei, arial, "楷体";
+            text-align: center;
+        }
+
+        /*整个页面的字体风格*/
+        header {
+            width: 100%;
+            height: 72px;
+            line-height: 72px;
+            /*行高，垂直居中只要和height一个值*/
+            font-size: 20px;
+            /*字体大小*/
+            text-align: center;
+            /*不仅可以让文字居中，还可以让容器居中*/
+            padding: 20px 0;
+            /*内边距 上下20px 左右0*/
+        }
+
+        header ul li {
+            float: left;
+            /*横 + width*/
+            width: 10rem;
+            height: 72px;
+            line-height: 72px;
+            list-style: none;
+            /*去掉默认的小点*/
+
+        }
+
+        /*a标签下模式是下划线和蓝色*/
+        header ul li a {
+            text-decoration: none;
+            /*去掉下划线*/
+            color: #000;
+        }
+
+        /*hover划过之后的效果的样式*/
+        header ul li:hover {
+            background: #fae017;
+            border-radius: 40px;
+            /*加圆角*/
+        }
+
+        /*定位越精准优先级越高*/
+        header ul li#login a {
+            background: url("image/logo_en.png") no-repeat;
+            background-size: contain;
+            /*按我们容器大小自适应背景图片*/
+            width: 254px;
+            height: 72px;
+            display: inline-block;
+            /*如果想要撑起宽度好高度。对非块级标签需要加这个属性，非块级，span，a，img，td*/
+            margin-left: 50px;
+        }
+
+        header ul li#login {
+            width: 304px;
+        }
+
+        header ul li.tel {
+            width: 300px;
+        }
+
+        header ul li#login:hover,
+        header ul li.tel:hover {
+            background: #fff;
+        }
+
+        #banner {
+            height: 700px;
+            width: 100%;
+            background: url("images/bg2.png") no-repeat;
+            background-size: cover;
+        }
+
+        .bount {
+            position: relative;
+            left: 50%;
+            top: 58%;
+            width: 550px;
+        }
+
+        .bount a {
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 30px;
+            display: inline-block;
+            background: #000;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        .bount a.bnt1:hover {
+            background: #f7dd16;
+        }
+
+        .bount a.bnt2:hover {
+            background: #f57a1c;
+        }
+
+
+
+        /*
+1,给lgoin a 下一个log背景 
+2，ul li 漂浮横 去掉点
+3.li：hover 划过后有一个黄色背景
+4，banner一个背景图
+5，给bount放在我们图片的右边
+6.给bount下面a表一个圆角，黑背景样式
+*/
+
+        header,
+        #banner,
+        #context {
+            text-align: left;
+        }
+
+        #context {
+            margin: 0 auto;
+            width: 1000px;
+            background: #fff;
+
+        }
+
+        #menu {
+            height: 50px;
+        }
+
+        #menu ul li {
+            background: #f7f9fc;
+            border: 1px solid #dfe3e5;
+            height: 50px;
+            float: left;
+            width: 16%;
+            list-style: none;
+            text-align: center;
+            line-height: 50px;
+            color: #6868;
+        }
+
+        #menu ul li.active {
+            width: 17%;
+            background: #fff;
+            border: 0px;
+            border-top: 2px solid blueviolet;
+        }
+
+        .clearBoth {
+            clear: both;
+        }
+
+        .flag {
+            height: 15px;
+            line-height: 15px;
+            background: #ff7f75;
+            color: #fff;
+            position: relative;
+            top: -12px;
+            padding: 0 5px;
+            margin-left: 3px;
+            font-size: 10px;
+        }
+
+        /* .flag i {
+            border: 2px solid #ff7f75;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            position: relative;
+            top: 16px;
+            height: 0;
+            left: 0;
+            bottom: -4px;
+        } */
+        #info {
+            padding: 30px;
+        }
+
+        .ctitle {
+            border-left: 7px solid #00ccaa;
+            padding-left: 18px;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li id="login"><a href="/"></a></li>
+            <li><a href="#">Java考证</a></li>
+            <li><a href="#">Oracle考证</a></li>
+            <li><a href="#">Aws考证</a></li>
+            <li><a href="#">领取免费资料</a></li>
+            <li class="tel">
+                03-5817-4856
+            </li>
+        </ul>
+    </header>
+    <div id="banner">
+        <div class="bount">
+            <a class="bnt1" href="#">立减领取免费试听课程</a>
+        </div>
+        <div class="bount" style="display: none;">
+            <a class="bnt2" href="#">专人在线免费指导</a>
+            <a class="bnt2" href="#">制定提分方案</a>
+        </div>
+    </div>
+
+    <script>
+        function change(val) {
+            var objAry = document.getElementById("info").getElementsByTagName("div");
+            for (var i in objAry) {
+                if (objAry[i].className != undefined && objAry[i].className.indexOf("block") > -1) {
+                    var tempAry = objAry[i].className.split("block");
+                    objAry[i].className = tempAry[0];
+                }
+            }
+            objAry[val].className = objAry[val].className + "block";
+            var objAry2 = document.getElementById("menu").getElementsByTagName("li");
+            for (var i in objAry2) {
+                if (objAry2[i].className != undefined && objAry2[i].className.indexOf("active") > -1) {
+                    objAry2[i].className = "";
+                }
+            }
+            objAry2[val].className = "active";
+        }
+    </script>
+
+    <section id="context">
+        <div id="menu">
+            <ul>
+                <li class="active" onclick="change(0)">课程介绍</li>
+                <li onclick="change(1)">课程大纲</li>
+                <li onclick="change(2)">试听<b class="flag"><i></i>免费</b></li>
+                <li onclick="change(3)">老师介绍</li>
+                <li onclick="change(4)">课程评价</li>
+                <li onclick="change(5)">退还须知</li>
+            </ul>
+        </div>
+        <div class="clearBoth"></div>
+        <div id="info">
+            <div id="jcjs">
+                <p class="ctitle">课程介绍</p>
+                <img src="image/介绍1.jpg" alt="">
+                <img src="image/介绍2.jpg" alt="">
+                <img src="image/介绍3.jpg" alt="">
+                <img src="image/介绍4.jpg" alt="">
+                <img src="image/介绍5.jpg" alt="">
+            </div>
+
+            <style>
+                .jcdg table {
+                    padding: 0;
+                    border: 1px solid #000;
+                    border-left: 0;
+                    border-right: 0;
+                    border-spacing: 0;
+                }
+
+                .jcdg td,
+                tr,
+                th {
+                    padding: 0;
+                    border: 1px solid #dcdfe0;
+                    border-left: 0;
+                    border-right: 0;
+                }
+
+                .jcdg thead {
+                    background: #0cacbb;
+                    color: #fff;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+
+                td.rigline {
+                    border-right: 1px solid #dcdfe0;
+                    text-align: center;
+
+
+                }
+
+                .jcdg td {
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 15px 8px;
+                }
+            </style>
+
+            <div class="jcdg">
+                <p class="ctitle">课程大纲</p>
+                <table borde="1">
+                    <thead>
+                        <tr>
+                            <th colspan="2" width="700">课程内容</th>
+                            <th width="100">课时</th>
+                            <th width="100">主讲老师</th>
+                            <th width="100">更多</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="9">技巧强化段</td>
+                            <td>Javaの基本</td>
+                            <td>２H</td>
+                            <td>簡先生</td>
+                            <td>更多</td>
+                        </tr>
+                        <tr>
+                            <td>Javaのデータ型の操作</td>
+                            <td>3H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>演算子と判定构造の使用</td>
+                            <td>２H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>配列の設定と使用</td>
+                            <td>４H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>ループの構成と使用</td>
+                            <td>３H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>メソッドとカプセルかの操作</td>
+                            <td>５H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>继承の操作</td>
+                            <td>２H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>例外の処理</td>
+                            <td>４H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>JavaのAPIの主操作</td>
+                            <td>６H</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="rigline">临考冲刺阶段</td>
+                            <td>模拟考1</td>
+                            <td>4H</td>
+                            <td>罗先生</td>
+                            <td>更多</td>
+                        </tr>
+                        <tr>
+
+                            <td>模拟考２</td>
+                            <td>4H</td>
+                            <td>罗先生</td>
+                            <td>更多</td>
+                        </tr>
+                        <tr>
+                            <td class="rigline">总复习段</td>
+                            <td>答题技巧</td>
+                            <td>2H</td>
+                            <td>罗先生</td>
+                            <td>更多</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <p class="ctitle">试听</p>
+            </div>
+            <div>
+                <p class="ctitle">老师介绍</p>
+            </div>
+            <div>
+                <p class="ctitle">课程评论</p>
+            </div>
+            <div>
+                <p class="ctitle">退还须知</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
